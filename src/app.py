@@ -42,7 +42,7 @@ while running:
         if len(current_images) > 2:
             current_images = []
 
-    screen.fill((0, 128, 128))
+    screen.fill(gc.BG_DARK)
     total_skipped = 0
 
     for _, tile in enumerate(tiles):
