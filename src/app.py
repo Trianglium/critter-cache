@@ -15,7 +15,7 @@ pygame.init()
 
 display.set_caption("Critter Cache")
 screen = display.set_mode((512, 512))
-matched = image.load('event/matched.png')
+matched = image.load('other_assets/matched.png')
 
 
 running = True
@@ -42,7 +42,7 @@ while running:
         if len(current_images) > 2:
             current_images = []
 
-    screen.fill((255, 255, 255))
+    screen.fill(gc.BG_DARK)
     total_skipped = 0
 
     for _, tile in enumerate(tiles):
