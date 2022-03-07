@@ -8,5 +8,5 @@ MARGIN = 4
 BG_DARK = (33,33,33)
 ASSET_DIR = 'assets'
 ASSET_FILES = [x for x in os.listdir(ASSET_DIR) if x[-3:].lower() == 'png']
-
+CARD_BACK = 'other_assets/card.png'
 assert len(ASSET_FILES) == 8
