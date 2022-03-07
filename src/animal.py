@@ -16,10 +16,12 @@ class Animal:
         self.col = index % gc.NUM_TILES_SIDE
         self.name = random.choice(available_animals())
         animals_count[self.name] += 1
+        self.cardback = image.load(gc.CARD_BACK)
 
         self.image_path = os.path.join(gc.ASSET_DIR, self.name)
         self.image = image.load(self.image_path)
         self.image = transform.scale(self.image, (gc.IMAGE_SIZE - 2 * gc.MARGIN, gc.IMAGE_SIZE - 2 * gc.MARGIN))
         self.box = self.image.copy()
-        self.box.fill((200, 200, 200))
+        #self.box.fill((200, 200, 200))
+        self.box.blit(self.cardback, [0, 0])
         self.skip = False
